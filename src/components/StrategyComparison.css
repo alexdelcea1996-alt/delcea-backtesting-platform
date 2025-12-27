@@ -1,0 +1,186 @@
+.strategy-comparison {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.strategy-comparison.empty {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.strategy-comparison.empty h3 {
+    margin-bottom: 0.5rem;
+}
+
+.strategy-comparison.empty p {
+    margin: 0.25rem 0;
+}
+
+.strategy-comparison.empty .hint {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}
+
+.sc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sc-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.toggle-metrics {
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.toggle-metrics:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.strategy-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-name {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 0.25rem;
+    line-height: 1;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+}
+
+.remove-btn:hover {
+    opacity: 1;
+    color: var(--danger);
+}
+
+.equity-comparison {
+    margin-bottom: 1.5rem;
+}
+
+.equity-comparison h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.equity-chart {
+    height: 120px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+.equity-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.metrics-table-wrapper {
+    overflow-x: auto;
+}
+
+.metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.metrics-table th,
+.metrics-table td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.metrics-table th {
+    color: var(--text-primary);
+    font-weight: 600;
+    background: var(--bg-tertiary);
+    position: sticky;
+    top: 0;
+    border-top: 3px solid transparent;
+}
+
+.metrics-table th:first-child {
+    border-top-color: transparent;
+}
+
+.metric-name {
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.metric-value {
+    color: var(--text-primary);
+    font-family: 'SF Mono', 'Monaco', monospace;
+    position: relative;
+}
+
+.metric-value.best {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.best-badge {
+    margin-left: 0.35rem;
+    font-size: 0.7rem;
+    color: var(--warning);
+}
+
+@media (max-width: 768px) {
+    .sc-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .strategy-legend {
+        flex-direction: column;
+    }
+}
